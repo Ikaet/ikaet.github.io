@@ -1,8 +1,61 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import localFont from 'next/font/local'
+import '../assets/styles/globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const barlow = localFont({
+  src:[
+    {
+      path: "../assets/fonts/Barlow-Black.ttf", 
+      weight: '900', 
+      style: 'normal',
+    },
+    {
+      path: "../assets/fonts/Barlow-Bold.ttf", 
+      weight: '700', 
+      style: 'normal',
+    },
+    {
+      path: "../assets/fonts/Barlow-ExtraBold.ttf", 
+      weight: '800', 
+      style: 'normal',
+    },
+    {
+      path: "../assets/fonts/Barlow-ExtraLight.ttf", 
+      weight: '200', 
+      style: 'normal',
+    },
+    {
+      path: "../assets/fonts/Barlow-Italic.ttf", 
+      weight: '400', 
+      style: 'normal',
+    },
+    {
+      path: "../assets/fonts/Barlow-Light.ttf", 
+      weight: '300', 
+      style: 'normal',
+    },
+    {
+      path: "../assets/fonts/Barlow-Medium.ttf", 
+      weight: '500', 
+      style: 'normal',
+    },
+    {
+      path: "../assets/fonts/Barlow-Regular.ttf", 
+      weight: '400', 
+      style: 'normal',
+    },
+    {
+      path: "../assets/fonts/Barlow-SemiBold.ttf", 
+      weight: '600', 
+      style: 'normal',
+    },
+    {
+      path: "../assets/fonts/Barlow-Thin.ttf", 
+      weight: '100', 
+      style: 'normal',
+    },
+  ]
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +69,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={barlow.className}>{children}</body>
     </html>
   )
 }
