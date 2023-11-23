@@ -1,6 +1,7 @@
 import Link from "next/link"
 
-export default function nav(){
+
+export default function Nav(){
     return(
         <main>
             <div className="z-10 max-w-5xl w-full items-center justify-between text-sm lg:flex">
